@@ -1,14 +1,7 @@
 package U3_EP1;
-
 import java.sql.*;
 import java.util.Scanner;
 
-/**
- * Transaction Management System
- * 
- * Handles transaction-related operations.
- * 
- */
 public class TMS {
 
     public static void transactionManagement(Connection conn, Scanner sc) {
@@ -84,7 +77,7 @@ public class TMS {
 
                 int rowsInserted = ps.executeUpdate();
                 if (rowsInserted > 0) {
-                    updateBookCopies(conn, bookId, -1); // Decrease available copies
+                    updateBookCopies(conn, bookId, -1);
                     System.out.println("Book Borrowed Successfully.");
                 }
             }
@@ -110,7 +103,7 @@ public class TMS {
             int rowsUpdated = ps.executeUpdate();
             if (rowsUpdated > 0) {
                 int bookId = getBookIdFromTransaction(conn, transactionId);
-                updateBookCopies(conn, bookId, 1); // Increase available copies
+                updateBookCopies(conn, bookId, 1);
                 System.out.println("Book Returned Successfully.");
             } else {
                 System.out.println("No transaction found with the given ID.");
