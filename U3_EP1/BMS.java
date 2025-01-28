@@ -1,14 +1,7 @@
 package U3_EP1;
-
 import java.sql.*;
 import java.util.Scanner;
 
-/**
- * Book Management System
- * 
- * Handles book-related operations.
- * 
- */
 public class BMS {
 
     public static void bookManagement(Connection conn, Scanner sc) {
