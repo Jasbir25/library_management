@@ -1,14 +1,7 @@
 package U3_EP1;
-
 import java.sql.*;
 import java.util.Scanner;
 
-/**
- * Member Management System
- * 
- * Handles member-related operations.
- * 
- */
 public class MMS {
 
     public static void memberManagement(Connection conn, Scanner sc) {
