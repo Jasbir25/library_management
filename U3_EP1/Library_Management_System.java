@@ -1,19 +1,12 @@
 package U3_EP1;
-
 import java.sql.*;
 import java.util.Scanner;
 
-/**
- * Library Management System
- * 
- * This system manages books, members, and transactions in a library.
- * 
- */
 public class Library_Management_System {
 
     public static void main(String[] args) {
         try {
-            String url = "jdbc:sqlite:D:/PES/3rd Sem/Java/Codes/netbeans/test/test.db";
+            String url = "jdbc:sqlite:path/to/test.db";
             Connection conn = DriverManager.getConnection(url);
             Scanner sc = new Scanner(System.in);
             String choice;
